@@ -15,14 +15,24 @@ export default function StartCarousel() {
       loop
       dragFree={false}
       draggable={false}
-      withControls
       withIndicators
+      withControls={false}
       slideGap={0}
       slideSize={"100%"}
       plugins={[autoplay.current]}
-      onMouseEnter={autoplay.current.stop}
-      onMouseLeave={autoplay.current.reset}
+      /* onMouseEnter={autoplay.current.stop}
+      onMouseLeave={autoplay.current.reset} */
       speed={5}
+      styles={(theme) => ({
+        indicator: {
+          width: 10,
+          height: 10,
+          borderRadius: 0,
+          "&[data-active]": {
+            backgroundColor: theme.colors["stunk-violet"][0],
+          },
+        },
+      })}
     >
       {[...Array(5)].map((v, i) => (
         <StartCarouselSlide

@@ -4,6 +4,7 @@ import { Box, Center, Container, Grid, Title } from "@mantine/core";
 import { Carousel } from "@mantine/carousel";
 import Placeholder from "@/components/Placeholder";
 import StartCarousel from "@/components/Home/StartCarousel";
+import FAQ from "@/components/Home/FAQ";
 
 export default function Home() {
   return (
@@ -17,13 +18,7 @@ export default function Home() {
       <Navigation />
       <StartCarousel />
       <Container size={"90%"}>
-        {[...Array(20)].map((v, i) => (
-          <Grid key={i}>
-            <Grid.Col span={12}>
-              <Placeholder />
-            </Grid.Col>
-          </Grid>
-        ))}
+        <FAQ />
       </Container>
     </>
   );

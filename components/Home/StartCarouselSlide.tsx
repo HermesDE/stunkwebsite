@@ -14,6 +14,7 @@ export default function StartCarouselSlide({ content, color }: Props) {
           alignItems: "center",
           justifyContent: "center",
           display: "flex",
+          cursor: "pointer",
         })}
       >
         {content}
